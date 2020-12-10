@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.arimaclanka.bluetoothrandika">
+
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:usesCleartextTraffic="true"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+<!--        Successs - This activity is used to advertise bluetooth data for other
+            as start activity-->
+        <activity android:name=".AdvertiserActivity">
+
+        </activity>
+
+<!--        This Acitivity forthe access quick details with bluetooth without connected-->
+        <activity android:name=".BeaconKitKatActivity">
+
+        </activity>
+
+        <!-- Success - This Acitivity forthe access quick details with bluetooth without connected-->
+        <activity android:name=".BeaconLollipopActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+<!--       Success but can't connect - This activity used for connecting bluetooth ble devices with
+            proper way and view the actual values... connection success but not connect
+            bluetooth devices still-->
+        <activity android:name=".MainActivity">
+
+        </activity>
+    </application>
+
+</manifest>

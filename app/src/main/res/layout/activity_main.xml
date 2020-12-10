@@ -1,0 +1,60 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+     android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+    <TableLayout
+        android:layout_height="match_parent"
+        android:stretchColumns="*"
+        android:layout_width="match_parent">
+
+        <TextView
+            android:gravity="center_horizontal"
+            android:textSize="42sp"
+            android:text="Android Weather Station"/>
+        <TableRow>
+            <TextView
+                android:id="@+id/text_temperature"
+                android:layout_column="0"
+                android:gravity="center_horizontal"/>
+            <TextView
+                android:layout_column="2"
+                android:id="@+id/text_pressure"
+                android:gravity="center_horizontal"/>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_column="0"
+                android:gravity="center_horizontal"
+                android:text="Ambient Temperature"/>
+            <TextView
+                android:layout_column="2"
+                android:gravity="center_horizontal"
+                android:text="Barometric Pressure"/>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/text_humidity"
+                android:layout_column="1"
+                android:gravity="center_horizontal"/>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_column="1"
+                android:gravity="center_horizontal"
+                android:text="Humidity"/>
+        </TableRow>
+
+
+    </TableLayout>
+
+</RelativeLayout>
